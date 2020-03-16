@@ -47,12 +47,16 @@ struct KdTree
 
 	bool isInBox(std::vector<float> &point, std::vector<float> &target, float distanceTol) {
 
-		if (abs(point[0]-target[0]) <= distanceTol && abs(point[1] - target[1]) <= distanceTol) {
+		// if (abs(point[0]-target[0]) <= distanceTol && abs(point[1] - target[1]) <= distanceTol) {
+		if ((point[0] >= (target[0] - distanceTol)) && (point[0] <= (target[0] + distanceTol)) \
+				&& (point[1] >= (target[1] - distanceTol)) && point[1] <= (target[1] + distanceTol)) {
 			return true;
 		} else {
 			return false;
 		}
 	}
+
+	// this function doesn't work well for some conditions
 	void searchHelper(Node *&node, std::vector<int> &ids, int depth, std::vector<float> &target, float distanceTol) {
 		if (node == NULL) {
 			return;
@@ -90,10 +94,10 @@ struct KdTree
 			}
 			int dim = depth % 2;
 			if (node->point[dim] > target[dim] - distanceTol) {
-				searchHelper(node->left, ids, depth+1, target, distanceTol);
+				searchHelper2(node->left, ids, depth+1, target, distanceTol);
 			}
 			if (node->point[dim] < target[dim] + distanceTol) {
-				searchHelper(node->right, ids, depth+1, target, distanceTol);
+				searchHelper2(node->right, ids, depth+1, target, distanceTol);
 			}
 		}
 	}
@@ -101,8 +105,8 @@ struct KdTree
 	std::vector<int> search(std::vector<float> target, float distanceTol)
 	{
 		std::vector<int> ids;
-		searchHelper(root, ids, 0, target, distanceTol);
-		//searchHelper2(root, ids, 0, target, distanceTol);
+		//searchHelper(root, ids, 0, target, distanceTol);
+		searchHelper2(root, ids, 0, target, distanceTol);
 		return ids;
 	}
 	
