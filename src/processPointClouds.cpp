@@ -2,6 +2,9 @@
 
 #include "processPointClouds.h"
 
+#include <unordered_set>
+
+#define PROJECT
 // constructor:
 template <typename PointT>
 ProcessPointClouds<PointT>::ProcessPointClouds() {}
@@ -98,6 +101,97 @@ ProcessPointClouds<PointT>::SeparateClouds(
   return segResult;
 }
 
+#ifdef PROJECT
+template <typename PointT>
+std::unordered_set<int> ProcessPointClouds<PointT>::RansacPlane(
+    typename pcl::PointCloud<PointT>::Ptr cloud, int maxIterations,
+    float distanceTol) {
+  std::unordered_set<int> inliersResult;
+  srand(time(NULL));
+
+  for (int i = 0; i < maxIterations; ++i) {
+    std::unordered_set<int> inliers;
+    while (inliers.size() < 3) {
+      inliers.insert(rand() % (cloud->points.size()));
+    }
+
+    double x1, y1, z1, x2, y2, z2, x3, y3, z3;
+    auto iter = inliers.begin();
+    PointT point = cloud->points[*iter++];
+    x1 = point.x;
+    y1 = point.y;
+    z1 = point.z;
+    point = cloud->points[*iter++];
+    x2 = point.x;
+    y2 = point.y;
+    z2 = point.z;
+    point = cloud->points[*iter];
+    x3 = point.x;
+    y3 = point.y;
+    z3 = point.z;
+
+    double A = (y2 - y1) * (z3 - z1) - (z2 - z1) * (y3 - y1);
+    double B = (z2 - z1) * (x3 - x1) - (x2 - x1) * (z3 - z1);
+    double C = (x2 - x1) * (y3 - y1) - (y2 - y1) * (x3 - x1);
+    double D = -(A * x1 + B * y1 + C * z1);
+    double N = sqrt(A * A + B * B + C * C);
+
+    for (int index = 0; index < cloud->points.size(); ++index) {
+      if (inliers.count(index) > 0) continue;
+      point = cloud->points[index];
+      double x = point.x;
+      double y = point.y;
+      double z = point.z;
+      double d = abs(A * x + B * y + C * z + D) / N;
+
+      if (d <= distanceTol) inliers.insert(index);
+    }
+
+    if (inliers.size() > inliersResult.size()) {
+      inliersResult = inliers;
+    }
+  }
+
+  return inliersResult;
+}
+
+template <typename PointT>
+std::pair<typename pcl::PointCloud<PointT>::Ptr,
+          typename pcl::PointCloud<PointT>::Ptr>
+ProcessPointClouds<PointT>::SegmentPlane(
+    typename pcl::PointCloud<PointT>::Ptr cloud, int maxIterations,
+    float distanceThreshold) {
+  // Time segmentation process
+  auto startTime = std::chrono::steady_clock::now();
+
+  std::unordered_set<int> inliers =
+      RansacPlane(cloud, maxIterations, distanceThreshold);
+
+  typename pcl::PointCloud<PointT>::Ptr cloud_obstacles(
+      new pcl::PointCloud<PointT>());
+  typename pcl::PointCloud<PointT>::Ptr cloud_plane(
+      new pcl::PointCloud<PointT>());
+
+  for (int index = 0; index < cloud->points.size(); index++) {
+    PointT point = cloud->points[index];
+    if (inliers.count(index))
+      cloud_plane->points.push_back(point);
+    else
+      cloud_obstacles->points.push_back(point);
+  }
+
+  auto endTime = std::chrono::steady_clock::now();
+  auto elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(
+      endTime - startTime);
+  std::cout << "plane segmentation took " << elapsedTime.count()
+            << " milliseconds" << std::endl;
+
+  std::pair<typename pcl::PointCloud<PointT>::Ptr,
+            typename pcl::PointCloud<PointT>::Ptr>
+      segResult(cloud_obstacles, cloud_plane);
+  return segResult;
+}
+#else
 template <typename PointT>
 std::pair<typename pcl::PointCloud<PointT>::Ptr,
           typename pcl::PointCloud<PointT>::Ptr>
@@ -138,6 +232,7 @@ ProcessPointClouds<PointT>::SegmentPlane(
       segResult = SeparateClouds(inliers, cloud);
   return segResult;
 }
+#endif
 
 template <typename PointT>
 std::vector<typename pcl::PointCloud<PointT>::Ptr>
