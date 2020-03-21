@@ -1,0 +1,263 @@
+Loaded 119978 data points from ../src/sensors/data/pcd/data_1/0000000000.pcd
+filtering took 10 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 6 milliseconds and found 9 clusters
+cluster size 331
+cluster size 295
+cluster size 232
+cluster size 191
+cluster size 173
+cluster size 85
+cluster size 73
+cluster size 67
+cluster size 29
+Loaded 118703 data points from ../src/sensors/data/pcd/data_1/0000000001.pcd
+filtering took 10 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 6 milliseconds and found 7 clusters
+cluster size 412
+cluster size 302
+cluster size 248
+cluster size 179
+cluster size 174
+cluster size 60
+cluster size 19
+Loaded 116651 data points from ../src/sensors/data/pcd/data_1/0000000002.pcd
+filtering took 10 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 7 milliseconds and found 7 clusters
+cluster size 448
+cluster size 269
+cluster size 227
+cluster size 168
+cluster size 160
+cluster size 82
+cluster size 15
+Loaded 115651 data points from ../src/sensors/data/pcd/data_1/0000000003.pcd
+filtering took 11 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 6 milliseconds and found 9 clusters
+cluster size 449
+cluster size 261
+cluster size 186
+cluster size 150
+cluster size 119
+cluster size 93
+cluster size 23
+cluster size 12
+cluster size 11
+Loaded 115151 data points from ../src/sensors/data/pcd/data_1/0000000004.pcd
+filtering took 10 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 6 milliseconds and found 10 clusters
+cluster size 495
+cluster size 231
+cluster size 182
+cluster size 135
+cluster size 118
+cluster size 108
+cluster size 20
+cluster size 19
+cluster size 13
+cluster size 11
+Loaded 114969 data points from ../src/sensors/data/pcd/data_1/0000000005.pcd
+filtering took 9 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 6 milliseconds and found 9 clusters
+cluster size 542
+cluster size 231
+cluster size 186
+cluster size 135
+cluster size 113
+cluster size 58
+cluster size 56
+cluster size 24
+cluster size 11
+Loaded 114396 data points from ../src/sensors/data/pcd/data_1/0000000006.pcd
+filtering took 11 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 6 milliseconds and found 9 clusters
+cluster size 438
+cluster size 206
+cluster size 178
+cluster size 117
+cluster size 116
+cluster size 96
+cluster size 83
+cluster size 23
+cluster size 21
+Loaded 114874 data points from ../src/sensors/data/pcd/data_1/0000000007.pcd
+filtering took 10 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 7 milliseconds and found 9 clusters
+cluster size 471
+cluster size 220
+cluster size 193
+cluster size 180
+cluster size 134
+cluster size 101
+cluster size 86
+cluster size 24
+cluster size 17
+Loaded 115237 data points from ../src/sensors/data/pcd/data_1/0000000008.pcd
+filtering took 12 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 6 milliseconds and found 8 clusters
+cluster size 469
+cluster size 213
+cluster size 212
+cluster size 185
+cluster size 145
+cluster size 133
+cluster size 28
+cluster size 24
+Loaded 115048 data points from ../src/sensors/data/pcd/data_1/0000000009.pcd
+filtering took 11 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 7 milliseconds and found 8 clusters
+cluster size 353
+cluster size 227
+cluster size 205
+cluster size 176
+cluster size 166
+cluster size 149
+cluster size 64
+cluster size 24
+Loaded 116007 data points from ../src/sensors/data/pcd/data_1/0000000010.pcd
+filtering took 10 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 7 milliseconds and found 8 clusters
+cluster size 398
+cluster size 262
+cluster size 249
+cluster size 172
+cluster size 164
+cluster size 141
+cluster size 67
+cluster size 19
+Loaded 118644 data points from ../src/sensors/data/pcd/data_1/0000000011.pcd
+filtering took 10 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 7 milliseconds and found 8 clusters
+cluster size 428
+cluster size 268
+cluster size 265
+cluster size 190
+cluster size 159
+cluster size 141
+cluster size 17
+cluster size 16
+Loaded 120123 data points from ../src/sensors/data/pcd/data_1/0000000012.pcd
+filtering took 10 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 7 milliseconds and found 9 clusters
+cluster size 419
+cluster size 256
+cluster size 219
+cluster size 204
+cluster size 173
+cluster size 171
+cluster size 31
+cluster size 17
+cluster size 14
+Loaded 120571 data points from ../src/sensors/data/pcd/data_1/0000000013.pcd
+filtering took 10 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 7 milliseconds and found 9 clusters
+cluster size 402
+cluster size 250
+cluster size 240
+cluster size 195
+cluster size 179
+cluster size 171
+cluster size 59
+cluster size 20
+cluster size 11
+Loaded 120769 data points from ../src/sensors/data/pcd/data_1/0000000014.pcd
+filtering took 11 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 7 milliseconds and found 8 clusters
+cluster size 416
+cluster size 257
+cluster size 251
+cluster size 187
+cluster size 171
+cluster size 150
+cluster size 82
+cluster size 11
+Loaded 121069 data points from ../src/sensors/data/pcd/data_1/0000000015.pcd
+filtering took 10 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 7 milliseconds and found 7 clusters
+cluster size 355
+cluster size 247
+cluster size 241
+cluster size 185
+cluster size 181
+cluster size 146
+cluster size 99
+Loaded 121064 data points from ../src/sensors/data/pcd/data_1/0000000016.pcd
+filtering took 11 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 6 milliseconds and found 9 clusters
+cluster size 265
+cluster size 252
+cluster size 229
+cluster size 208
+cluster size 177
+cluster size 143
+cluster size 86
+cluster size 13
+cluster size 13
+Loaded 120942 data points from ../src/sensors/data/pcd/data_1/0000000017.pcd
+filtering took 9 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 6 milliseconds and found 7 clusters
+cluster size 275
+cluster size 223
+cluster size 197
+cluster size 181
+cluster size 157
+cluster size 151
+cluster size 113
+Loaded 120929 data points from ../src/sensors/data/pcd/data_1/0000000018.pcd
+filtering took 11 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 5 milliseconds and found 7 clusters
+cluster size 281
+cluster size 202
+cluster size 197
+cluster size 180
+cluster size 142
+cluster size 116
+cluster size 10
+Loaded 120854 data points from ../src/sensors/data/pcd/data_1/0000000019.pcd
+filtering took 10 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 5 milliseconds and found 6 clusters
+cluster size 302
+cluster size 212
+cluster size 180
+cluster size 179
+cluster size 163
+cluster size 127
+Loaded 121098 data points from ../src/sensors/data/pcd/data_1/0000000020.pcd
+filtering took 10 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 6 milliseconds and found 6 clusters
+cluster size 330
+cluster size 222
+cluster size 180
+cluster size 178
+cluster size 143
+cluster size 142
+Loaded 121208 data points from ../src/sensors/data/pcd/data_1/0000000021.pcd
+filtering took 12 milliseconds
+plane segmentation took 0 milliseconds
+clustering took 5 milliseconds and found 6 clusters
+cluster size 334
+cluster size 213
+cluster size 182
+cluster size 173
+cluster size 138
+cluster size 134
